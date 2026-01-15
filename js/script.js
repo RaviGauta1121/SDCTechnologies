@@ -237,3 +237,30 @@ if (playBtn) {
     });
 }
 */
+
+
+// Location card interactions
+document.querySelectorAll('.location-card').forEach((card, index) => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.location-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
+});
+
+// Enhanced form with better UX
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const submitBtn = this.querySelector('.form-submit-btn');
+  const originalText = submitBtn.textContent;
+  
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+  
+  // Simulate API call
+  setTimeout(() => {
+    alert('✅ Thank you! Your inquiry has been sent to our Digital Realty partnership team.');
+    this.reset();
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+  }, 1500);
+});
