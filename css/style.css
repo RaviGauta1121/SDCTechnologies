@@ -636,7 +636,7 @@ body {
 
 /* Testimonial Section */
 .testimonial-section {
-    padding: 80px 20px;
+    padding:  20px;
     background: var(--primary-blue);
 }
 
@@ -658,7 +658,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.6;
     font-style: italic;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .testimonial-author {
